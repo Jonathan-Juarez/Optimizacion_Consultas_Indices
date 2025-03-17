@@ -74,10 +74,10 @@ Tener instalado ThunderClient para utilizar la API.
 
 ###Justificación de modelado:
 
-La estructura de la API para evaluar el rendimiento de consultas sin y con índices presentó un modelo de completa libertad, ya que no es lo principal.
-Definí un modelado de carros, el cual posee nombre para enumerar el carro (carro 1) y facilitar su uso en ciertas consultas, categorías y fecha de creación del carro, marca, precio y stock. También se pudo haber considerado el modelo, pero, al utilizar random para asignar los datos, surgiría una revoltura entre marca y modelo.
-Las consultas determinadas tuvieron una complejidad variante para cumplir con los tipos índices (simple, compuesto y texto), siempre buscando que los índices sean beneficiantes, ya que, si se asigna un índice donde no amerita o se utiliza incorrectamente, podría mantenerse igual o incluso empeorar. Esta afirmación se reafirma al utilizar el tercer índice de texto, donde fue mucho más lento al tomar por separado cada espacio que presentaba la cadena.
-Teniendo presente que las consultas fueron definidas en base a los índices para procurar la eficiencia: los índices establecidos resultaron más eficientes al realizar las búsquedas porque evitan que se realizar un recorrido completo de los documentos de la colección hasta encontrar el dato que cumpla con el parámetro definido. 
+La estructura de la API para evaluar el rendimiento de consultas sin y con índices presentó un modelo de completa libertad, ya que no es lo principal. <br>
+Definí un modelado de carros, el cual posee nombre para enumerar el carro (carro 1) y facilitar su uso en ciertas consultas, categorías y fecha de creación del carro, marca, precio y stock. También se pudo haber considerado el modelo, pero, al utilizar random para asignar los datos, surgiría una revoltura entre marca y modelo. <br>
+Las consultas determinadas tuvieron una complejidad variante para cumplir con los tipos índices (simple, compuesto y texto), siempre buscando que los índices sean beneficiantes, ya que, si se asigna un índice donde no amerita o se utiliza incorrectamente, podría mantenerse igual o incluso empeorar. Esta afirmación se reafirma al utilizar el tercer índice de texto, donde fue mucho más lento al tomar por separado cada espacio que presentaba la cadena. <br>
+Teniendo presente que las consultas fueron definidas en base a los índices para procurar la eficiencia: los índices establecidos fueron más eficientes porque las búsquedas evitan realizar un recorrido completo de los todos los documentos de la colección hasta encontrar el dato que cumpla con el parámetro definido. 
 
 A continuación la justificación de la selección de cada índice:
 
